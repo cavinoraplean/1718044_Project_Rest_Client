@@ -10,7 +10,6 @@ class All_model extends CI_model {
     }
     public function getAll()
     {
-        // return $this->db->get('tulungagung')->result_array();
         $response = $this->_client->request('GET','all');
         $result = json_decode($response->getBody()->getContents(), true);
         return $result['data'];
@@ -26,7 +25,7 @@ class All_model extends CI_model {
             "ukuran" => $this->input->post('ukuran', true),
             "harga" => $this->input->post('harga', true),
         ];
-        // $this->db->insert('tulungagung', $data);
+
         $response = $this->_client->request('POST','all',[
             'form_params' => $data
         ]);
@@ -36,7 +35,6 @@ class All_model extends CI_model {
 
     public function getId($id)
     {
-        // return $this->db->get_where('tulungagung', ['id' => $id])->row_array();
         $response = $this->_client->request('GET','all',[
             'query' => [
                 'id' => $id
@@ -48,8 +46,7 @@ class All_model extends CI_model {
 
     public function hapusData($id)
     {
-        // $this->db->delete('tulungagung', ['id' => $id]);
-        $response = $this->_client->request('DELETE','all',[
+       $response = $this->_client->request('DELETE','all',[
             'form_params' => [
                 'id' => $id
             ]
@@ -67,8 +64,7 @@ class All_model extends CI_model {
             "harga" => $this->input->post('harga', true),
             "id" => $this->input->post('id', true)
         ];
-        // $this->db->where('id', $this->input->post('id'));
-        // $this->db->update('tulungagung', $data);
+        
         $response = $this->_client->request('PUT','all',[
             'form_params' => $data
         ]);
