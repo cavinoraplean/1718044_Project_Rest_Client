@@ -6,8 +6,7 @@
                         <hr class="divider my-4" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-black font-weight-light mb-5">Selamat Datang di MyShoes Store! 
-                            <br>Cari dan temukan Sepatu yang anda butuhkan disini !</p>
+                        <p class="text-black font-weight-light mb-5">Selamat Datang di MyShoes Store!</p>
                         <a class="btn btn-success btn-xl" href="<?= base_url(); ?>All_control">Find Out More</a>
                     </div>
                 </div>
