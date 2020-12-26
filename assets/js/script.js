@@ -16,7 +16,7 @@ $('.tombol-hapus').on('click', function (e) {
 
     Swal({
         title: 'Apakah anda yakin',
-        text: "data sepatuu akan dihapus",
+        text: "data sepatu akan dihapus",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#d33',

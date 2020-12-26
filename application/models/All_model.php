@@ -10,7 +10,11 @@ class All_model extends CI_model {
     }
     public function getAll()
     {
-        $response = $this->_client->request('GET','all');
+        $response = $this->_client->request('GET','all',[
+            'query' => [
+                'API_TOKEN' => '123456'
+            ]
+        ]);
         $result = json_decode($response->getBody()->getContents(), true);
         return $result['data'];
     }
@@ -24,6 +28,7 @@ class All_model extends CI_model {
             "warna" => $this->input->post('warna', true),
             "ukuran" => $this->input->post('ukuran', true),
             "harga" => $this->input->post('harga', true),
+            'API_TOKEN' => '123456'
         ];
 
         $response = $this->_client->request('POST','all',[
@@ -37,6 +42,7 @@ class All_model extends CI_model {
     {
         $response = $this->_client->request('GET','all',[
             'query' => [
+                'API_TOKEN' => '123456',
                 'id' => $id
             ]
         ]);
@@ -48,6 +54,7 @@ class All_model extends CI_model {
     {
        $response = $this->_client->request('DELETE','all',[
             'form_params' => [
+                'API_TOKEN' => '123456',
                 'id' => $id
             ]
         ]);
@@ -62,7 +69,8 @@ class All_model extends CI_model {
             "warna" => $this->input->post('warna', true),
             "ukuran" => $this->input->post('ukuran', true),
             "harga" => $this->input->post('harga', true),
-            "id" => $this->input->post('id', true)
+            "id" => $this->input->post('id', true),
+            'API_TOKEN' => '123456'
         ];
         
         $response = $this->_client->request('PUT','all',[

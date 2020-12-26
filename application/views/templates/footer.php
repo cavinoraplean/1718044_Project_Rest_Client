@@ -11,6 +11,6 @@
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> -->
     <script src="<?= base_url(); ?>assets/js/sweetalert2.all.min.js"></script>
-    <script src="<?= base_url(); ?>assets/js/scriptku.js"></script>
+    <script src="<?= base_url(); ?>assets/js/script.js"></script>
   </body>
 </html>
